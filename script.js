@@ -69,7 +69,7 @@ function drawGroupedChart() {
   const baseHeight = Number(canvas.getAttribute('height'));
   canvas.width = rect.width * dpr; canvas.height = baseHeight * dpr; ctx.scale(dpr, dpr);
   const width = rect.width; const height = baseHeight;
-  const padding = { top: 42, right: 24, bottom: 88, left: 78 };
+  const padding = { top: 52, right: 24, bottom: 62, left: 78 };
   const max = 3_500_000;
   const chartWidth = width - padding.left - padding.right;
   const chartHeight = height - padding.top - padding.bottom;
@@ -92,8 +92,15 @@ function drawGroupedChart() {
       const y = padding.top + chartHeight - barHeight;
       ctx.fillStyle = value ? item.color : 'rgba(16,24,39,.08)';
       ctx.beginPath(); ctx.roundRect(x, y, barWidth, Math.max(barHeight, 2), 5); ctx.fill();
+      if (value) {
+        ctx.fillStyle = '#101827';
+        ctx.textAlign = 'center';
+        ctx.fillText(formatCompact(value), x + barWidth / 2, y - 7);
+      }
     });
-    ctx.save(); ctx.translate(baseX + groupWidth / 2, height - 44); ctx.rotate(-Math.PI / 5); ctx.fillStyle = '#4d5b73'; ctx.textAlign = 'center'; ctx.fillText(label, 0, 0); ctx.restore();
+    ctx.fillStyle = '#4d5b73';
+    ctx.textAlign = 'center';
+    ctx.fillText(label, baseX + groupWidth / 2, height - 30);
   });
   series.forEach((item, index) => {
     const x = padding.left + index * 110;
