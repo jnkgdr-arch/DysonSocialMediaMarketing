@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dyson Social Media Marketing Analysis</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero" id="top">
+    <nav class="top-nav" aria-label="Main navigation">
+      <a class="brand" href="#top">Dyson Analysis</a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#overview">Overview</a>
+        <a href="#competitors">Competitors</a>
+        <a href="#swot">SWOT</a>
+        <a href="#target">Target Market</a>
+        <a href="#influencers">Influencers</a>
+        <a href="#recommendations">Posts</a>
+      </div>
+    </nav>
+
+    <section class="hero-content hero-board">
+      <div class="hero-main panel glass">
+          <p class="eyebrow">MRKT 458 Social Media Marketing · UMGC · Janelle Gardner</p>
+          <h1>Executive Social Media Marketing Analysis for Dyson</h1>
+          <p class="hero-copy">An interactive board-ready dashboard using the provided Dyson overview, competitor research, SWOT analysis, target market information, influencer opportunities, and social media post recommendations.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#overview">View Dashboard</a>
+            <a class="button secondary" href="#competitors">Compare Competitors</a>
+          </div>
+      </div>
+      <aside class="winner-card panel" aria-label="Winning partnership infographic summary">
+          <p class="eyebrow">Winning partnership</p>
+          <h2>Lori Williamson · @nowitsclean</h2>
+          <p>Best fit for Dyson’s Spring-ready vacuum campaign because she posts daily cleaning tips, shares Amazon finds, and has already mentioned a Dyson vacuum in a vacuum deals post.</p>
+          <div class="winner-stat-grid">
+            <div class="winner-stat"><span>Instagram</span><strong>499K</strong><small>@nowitsclean followers</small></div>
+            <div class="winner-stat"><span>TikTok</span><strong>1.8M</strong><small>@nowitsclean followers</small></div>
+            <div class="winner-stat"><span>YouTube</span><strong>524</strong><small>@nowitsclean3039 subscribers</small></div>
+          </div>
+          <div class="infographic-bars" aria-label="Winning partnership follower stat chart">
+            <div><span>Instagram · 499K followers</span><div class="track"><div class="fill" style="width:28%"></div></div></div>
+            <div><span>TikTok · 1.8M followers</span><div class="track"><div class="fill" style="width:100%"></div></div></div>
+            <div><span>YouTube · 524 subscribers</span><div class="track"><div class="fill" style="width:1%"></div></div></div>
+          </div>
+          <p class="caption">Recommendation: partner with Lori to promote Dyson vacuums and attachments using “Get Spring ready” and #DysonClean #GetSpringReady.</p>
+      </aside>
+      <aside class="runner-up-card panel" aria-label="Runner-up partnership infographic summary">
+          <p class="eyebrow">Losing partnership</p>
+          <h2>Vacuum Wars</h2>
+          <p>Useful for Dyson V15 Detect reviews and niche floor-cleaning word of mouth, but not the best overall Spring-ready campaign fit because the pages are solely focused on floor cleaning tests and reviews. Vacuum Wars has 11.3K TikTok followers, which is not as high as Lori; TikTok is the most used social site, so target-market platform fit is important when choosing the partner.</p>
+          <div class="winner-stat-grid">
+            <div class="winner-stat"><span>YouTube</span><strong>301K</strong><small>VacuumWars subscribers</small></div>
+            <div class="winner-stat"><span>Instagram</span><strong>3,588</strong><small>@vacuumwars followers</small></div>
+            <div class="winner-stat"><span>TikTok</span><strong>11.3K</strong><small>@vacuum_wars followers</small></div>
+          </div>
+          <div class="infographic-bars" aria-label="Runner-up partnership follower stat chart">
+            <div><span>YouTube · 301K subscribers</span><div class="track"><div class="fill runner-fill" style="width:100%"></div></div></div>
+            <div><span>Instagram · 3,588 followers</span><div class="track"><div class="fill runner-fill" style="width:2%"></div></div></div>
+            <div><span>TikTok · 11.3K followers</span><div class="track"><div class="fill runner-fill" style="width:4%"></div></div></div>
+          </div>
+          <p class="caption runner-caption">Result: strong review niche, but Lori’s daily cleaning tips, Amazon finds, and Spring discount alignment make her the stronger Dyson partnership.</p>
+      </aside>
+    </section>
+  </header>
+
+  <main>
+    <section class="section" id="overview">
+      <div class="section-heading">
+        <p class="eyebrow">Overview</p>
+        <h2>Dyson company and social reach snapshot</h2>
+        <p>Dyson is an electric appliance manufacturer founded in Malmesbury, England by James Dyson in 1991. The company creates vacuum cleaners, air purifiers, hand dryers, hair dryers, fans, heaters, lights, and commercial products for B2B and B2C customers.</p>
+      </div>
+      <div class="grid two-column">
+        <article class="panel stat-card">
+          <h3>Mission focus</h3>
+          <p>Dyson creates products that “solve problems” with state-of-the-art technology made by engineers and scientists.</p>
+          <dl class="fact-list">
+            <div><dt>Company</dt><dd>Dyson</dd></div>
+            <div><dt>Founded</dt><dd>1991 · 33 years</dd></div>
+            <div><dt>Origin</dt><dd>Malmesbury, England</dd></div>
+            <div><dt>Business model</dt><dd>B2B and B2C</dd></div>
+          </dl>
+        </article>
+        <article class="panel chart-card">
+          <div class="card-title-row">
+            <h3>Dyson social media followers</h3>
+            <span class="metric-pill">Initial stat chart</span>
+          </div>
+          <canvas id="dysonFollowersChart" height="280" aria-label="Dyson social media follower chart"></canvas>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="competitors">
+      <div class="section-heading">
+        <p class="eyebrow">Competitive research objective</p>
+        <h2>Evaluation of two competitor social media sites</h2>
+        <p>How iRobot and Bissell use voice, tone, customer response, and content formats to drive engagement.</p>
+      </div>
+      <div class="grid two-column">
+        <article class="panel competitor-card">
+          <img src="assets/irobot-fb.jpeg" alt="iRobot social media post asset" />
+          <div>
+            <h3>Competitor #1: iRobot</h3>
+            <p>Posts range from mini reels to densely worded posts about appliance features, promotions, and company accomplishments. Posting ranges from 3+ posts per week to 1 a month.</p>
+            <ul>
+              <li><strong>Voice:</strong> passionate, respectful, casual, funny, sympathetic, and informative depending on platform.</li>
+              <li><strong>Content:</strong> informative product reels, funny feature-led acting, and newsfeed-style updates.</li>
+              <li><strong>Successful post:</strong> October 4, 2022 post received high likes, engagement, moderate shares, and visible positive reactions.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="panel competitor-card">
+          <img src="assets/bissell-fb.jpeg" alt="Bissell social media post asset" />
+          <div>
+            <h3>Competitor #2: Bissell</h3>
+            <p>Posts range from informational to casual question engagement and mini videos, with 1-2 posts per week.</p>
+            <ul>
+              <li><strong>Voice:</strong> consistent, upbeat, casual, and friendly.</li>
+              <li><strong>Content:</strong> short how-to videos, engagement posts, product promotions, company news, and testimonials.</li>
+              <li><strong>Successful post:</strong> Recent recall post drew positive engagement and high shares because customers felt seen and heard.</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+      <article class="panel chart-card wide-chart">
+        <div class="card-title-row">
+          <h3>Social audience competitor comparison</h3>
+          <span class="metric-pill">Followers/subscribers provided</span>
+        </div>
+        <canvas id="competitorChart" height="360" aria-label="Competitor social audience chart"></canvas>
+      </article>
+    </section>
+
+    <section class="section" id="swot">
+      <div class="section-heading">
+        <p class="eyebrow">S.W.O.T Chart</p>
+        <h2>Dyson social media strategic position</h2>
+      </div>
+      <div class="swot-grid">
+        <article class="panel swot strength"><h3>Strengths</h3><ul><li>Promotes products by referencing technology goals.</li><li>Posts company mission videos that advocate for change.</li><li>Has @askDyson to answer inquiries and localize customer questions.</li></ul></article>
+        <article class="panel swot weakness"><h3>Weaknesses</h3><ul><li>Poor customer service response.</li><li>Slow posting frequency.</li><li>Lacks humanity in voice and tone.</li></ul></article>
+        <article class="panel swot opportunity"><h3>Opportunities</h3><ul><li>Best training and response for social media inquiries.</li><li>Create informative how-to posts on common product issues.</li><li>Find a new voice and tone for better audience connection.</li><li>Create polls for better customer engagement.</li></ul></article>
+        <article class="panel swot threat"><h3>Threats</h3><ul><li>More efficient vacuums.</li><li>Customers not purchasing due to continuous product malfunction after purchase.</li><li>Cheaper priced vacuum.</li></ul></article>
+      </div>
+    </section>
+
+    <section class="section" id="target">
+      <div class="section-heading">
+        <p class="eyebrow">Target Market</p>
+        <h2>B2C and B2B decision profiles</h2>
+      </div>
+      <div class="grid two-column">
+        <article class="panel persona-card"><h3>B2C target</h3><p>35+ years old, middle to upper income, single or married with pets, urban or suburban, with carpet and/or hardwood flooring.</p><div class="mini-bars" id="b2cBars"></div><h4>Wants, needs, and motivations</h4><ul><li>Technologically advanced vacuum for multiple floor surfaces.</li><li>Cleans pet dander and food debris in large and small household areas.</li><li>Not too bulky or hard to maneuver.</li><li>Strong motor for deep cleaning.</li><li>Motivated by reliability and efficiency.</li></ul></article>
+        <article class="panel persona-card"><h3>B2B target</h3><p>Hotel/resort concierge management at 4/5-star properties with 20+ years of experience in densely populated metropolitan areas.</p><div class="mini-bars" id="b2bBars"></div><h4>Wants, needs, and motivations</h4><ul><li>Handles multiple floor surfaces and prolonged use.</li><li>Easy storage and wall-mount option.</li><li>Shows effective cleaning process for cleanliness reputation.</li><li>Purchase decisions involve at least 3 people.</li><li>Motivated by price point and product reliability.</li></ul></article>
+      </div>
+    </section>
+
+    <section class="section" id="influencers">
+      <div class="section-heading">
+        <p class="eyebrow">Potential company influencer partnerships</p>
+        <h2>Influencer audience opportunity</h2>
+      </div>
+      <div class="grid two-column">
+        <article class="panel influencer-card"><img src="assets/lori-nic-tktk.jpeg" alt="Lori Williamson social media asset" /><h3>Lori Williamson · @nowitsclean</h3><p>Posts daily cleaning tips and Amazon finds. Dyson already partners with Amazon, and Lori has a Dyson vacuum already mentioned in a post for vacuum deals.</p></article>
+        <article class="panel influencer-card"><img src="assets/vacuum-wars-youtube.jpeg" alt="Vacuum Wars YouTube asset" /><h3>Vacuum Wars</h3><p>Focused solely on floor cleaning, testing and reviewing vacuums by flooring type and best-vacuum videos. This niche audience can support word of mouth and reviews.</p></article>
+      </div>
+      <article class="panel chart-card wide-chart">
+        <div class="card-title-row"><h3>Potential influencer social stats</h3></div>
+        <canvas id="influencerChart" height="340" aria-label="Influencer audience stats chart"></canvas>
+      </article>
+    </section>
+
+    <section class="section" id="recommendations">
+      <div class="section-heading">
+        <p class="eyebrow">Social media post recommendations</p>
+        <h2>Spring campaign concept for Dyson</h2>
+      </div>
+      <div class="grid two-column">
+        <article class="panel post-card"><img src="assets/facebook-daone.jpeg" alt="Facebook Dyson recommendation asset one" /><h3>Facebook campaign direction</h3><p>Dyson vacuum with attachments, call to act: “Get Spring ready,” influencer: @nowitsclean, and focus on a discounted price for Spring deep cleaning.</p><p class="caption">Suggested text: “Is it clean or is it Dyson clean?” Hashtags: #DysonClean #GetSpringReady</p></article>
+        <article class="panel post-card"><img src="assets/instagram-daone.jpeg" alt="Instagram Dyson recommendation asset one" /><h3>Instagram campaign direction</h3><p>Use a color scheme that compliments the Instagram logo, capitalize the Spring sale, and call consumers to order while Dyson is partnering with @nowitsclean.</p><p class="caption">Emoji direction: flower for spring, water for cleaning, and strong arm for strength.</p></article>
+        <article class="panel post-card"><img src="assets/facebook-datwo.jpeg" alt="Facebook Dyson recommendation asset two" /><h3>Partnership message</h3><p>Represent the joy of the discount, the spring season, and the partnership with excited, flower, and handshake emoji concepts.</p></article>
+        <article class="panel post-card"><img src="assets/instagram-datwo.jpeg" alt="Instagram Dyson recommendation asset two" /><h3>Visual reinforcement</h3><p>Show vacuum attachments and the Spring-ready value proposition for consumers who want reliable deep-cleaning solutions.</p></article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer panel">
+    <p>Reference provided: Leading Vacuum Cleaner Makers, 2022. (2024). In V. L. Burton, III (Ed.), <em>Market Share Reporter</em> (34th ed.). Gale.</p>
+    <a href="#top">Back to top</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
