@@ -57,6 +57,9 @@ h3 { font-size: 1.35rem; }
 .grid { display: grid; gap: 1.35rem; }
 .two-column { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .stat-card, .chart-card, .competitor-card, .persona-card, .influencer-card, .post-card, .swot { padding: 1.25rem; }
+.chart-card { overflow-x: auto; overflow-y: hidden; }
+.chart-card canvas { display: block; width: 100%; min-width: 640px; }
+.wide-chart canvas { min-width: 920px; }
 .fact-list { display: grid; gap: .75rem; margin: 1rem 0 0; }
 .fact-list div { display: flex; justify-content: space-between; gap: 1rem; padding: .75rem; border-radius: .9rem; background: rgba(37,99,235,.08); }
 dt { font-weight: 900; } dd { margin: 0; color: var(--muted); text-align: right; }
@@ -64,7 +67,7 @@ dt { font-weight: 900; } dd { margin: 0; color: var(--muted); text-align: right;
 .metric-pill { display: inline-flex; padding: .42rem .7rem; border-radius: 999px; background: #dbeafe; color: #1d4ed8; font-weight: 900; font-size: .78rem; white-space: nowrap; }
 .wide-chart { margin-top: 1.35rem; }
 .competitor-card, .influencer-card, .post-card { display: grid; gap: 1rem; align-content: start; }
-.competitor-card img, .influencer-card img, .post-card img { aspect-ratio: 16 / 10; object-fit: cover; border: 1px solid #dbeafe; }
+.competitor-card img, .influencer-card img, .post-card img { aspect-ratio: 16 / 10; object-fit: contain; background: #f8fbff; border: 1px solid #dbeafe; padding: .5rem; }
 ul { padding-left: 1.2rem; color: var(--muted); }
 .swot-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; }
 .swot { border-top: .45rem solid var(--blue); }
