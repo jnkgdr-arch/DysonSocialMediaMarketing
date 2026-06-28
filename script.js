@@ -56,11 +56,11 @@ function drawBarChart(canvasId, labels, values, options = {}) {
 }
 
 function drawGroupedChart() {
-  const labels = ['Facebook', 'Instagram', 'YouTube', 'TikTok', 'X/Twitter', 'LinkedIn', 'Pinterest'];
+  const labels = ['TikTok', 'LinkedIn', 'X/Twitter'];
   const series = [
-    { name: 'Dyson', values: [3200000, 1000000, 657000, 54800, 0, 0, 0], color: '#67e8f9' },
-    { name: 'iRobot', values: [1600000, 113000, 41600, 0, 42500, 86332, 0], color: '#a78bfa' },
-    { name: 'Bissell', values: [347000, 122000, 65200, 0, 20200, 0, 12000], color: '#86efac' }
+    { name: 'Dyson', values: [67500, 524, 90100], color: '#67e8f9' },
+    { name: 'iRobot', values: [70500, 98000, 41200], color: '#a78bfa' },
+    { name: 'Bissell', values: [117600, 43000, 19200], color: '#86efac' }
   ];
   const canvas = document.getElementById('competitorChart');
   const ctx = canvas.getContext('2d');
@@ -70,7 +70,7 @@ function drawGroupedChart() {
   canvas.width = rect.width * dpr; canvas.height = baseHeight * dpr; ctx.scale(dpr, dpr);
   const width = rect.width; const height = baseHeight;
   const padding = { top: 52, right: 24, bottom: 62, left: 78 };
-  const max = 3_500_000;
+  const max = 130_000;
   const chartWidth = width - padding.left - padding.right;
   const chartHeight = height - padding.top - padding.bottom;
   ctx.clearRect(0,0,width,height);
