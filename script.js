@@ -122,7 +122,7 @@ function buildMiniBars(containerId, items) {
 function renderCharts() {
   drawBarChart('dysonFollowersChart', ['Facebook', 'Instagram', 'YouTube', 'TikTok'], [3200000, 1000000, 657000, 54800]);
   drawGroupedChart();
-  drawBarChart('influencerChart', ['Lori Instagram', 'Lori TikTok', 'Vacuum Wars YouTube', 'Vacuum Wars Instagram'], [499000, 1800000, 301000, 3588]);
+  drawBarChart('influencerChart', ['Lori IG', 'Lori TikTok', 'Lori YouTube', 'Vacuum Wars YouTube', 'Vacuum Wars IG', 'Vacuum Wars TikTok'], [499000, 1800000, 524, 301000, 3588, 11300]);
 }
 
 document.querySelector('.nav-toggle').addEventListener('click', event => {
