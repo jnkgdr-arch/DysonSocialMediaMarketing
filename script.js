@@ -56,11 +56,11 @@ function drawBarChart(canvasId, labels, values, options = {}) {
 }
 
 function drawGroupedChart() {
-  const labels = ['Facebook', 'Instagram', 'YouTube', 'TikTok', 'X/Twitter', 'LinkedIn', 'Pinterest'];
+  const labels = ['TikTok', 'LinkedIn', 'X/Twitter', 'Pinterest'];
   const series = [
-    { name: 'Dyson', values: [3200000, 1000000, 657000, 54800, 0, 0, 0], color: '#67e8f9' },
-    { name: 'iRobot', values: [1600000, 113000, 41600, 0, 42500, 86332, 0], color: '#a78bfa' },
-    { name: 'Bissell', values: [347000, 122000, 65200, 0, 20200, 0, 12000], color: '#86efac' }
+    { name: 'Dyson', values: [67500, 524, 90100, 0], color: '#67e8f9', gradientTo: '#2563eb' },
+    { name: 'iRobot', values: [70500, 98000, 41200, 0], color: '#a78bfa', gradientTo: '#7c3aed' },
+    { name: 'Bissell', values: [117600, 43000, 19200, 12000], color: '#86efac', gradientTo: '#16a34a' }
   ];
   const canvas = document.getElementById('competitorChart');
   const ctx = canvas.getContext('2d');
@@ -70,7 +70,7 @@ function drawGroupedChart() {
   canvas.width = rect.width * dpr; canvas.height = baseHeight * dpr; ctx.scale(dpr, dpr);
   const width = rect.width; const height = baseHeight;
   const padding = { top: 52, right: 24, bottom: 62, left: 78 };
-  const max = 3_500_000;
+  const max = 130_000;
   const chartWidth = width - padding.left - padding.right;
   const chartHeight = height - padding.top - padding.bottom;
   ctx.clearRect(0,0,width,height);
@@ -90,8 +90,12 @@ function drawGroupedChart() {
       const barHeight = value / max * chartHeight;
       const x = baseX + seriesIndex * (barWidth + 3);
       const y = padding.top + chartHeight - barHeight;
-      ctx.fillStyle = value ? item.color : 'rgba(16,24,39,.08)';
-      ctx.beginPath(); ctx.roundRect(x, y, barWidth, Math.max(barHeight, 2), 5); ctx.fill();
+      const visibleBarHeight = Math.max(barHeight, 2);
+      const gradient = ctx.createLinearGradient(0, y, 0, y + visibleBarHeight);
+      gradient.addColorStop(0, item.color);
+      gradient.addColorStop(1, item.gradientTo);
+      ctx.fillStyle = value ? gradient : 'rgba(16,24,39,.08)';
+      ctx.beginPath(); ctx.roundRect(x, y, barWidth, visibleBarHeight, 5); ctx.fill();
       if (value) {
         ctx.fillStyle = '#101827';
         ctx.textAlign = 'center';
@@ -104,7 +108,9 @@ function drawGroupedChart() {
   });
   series.forEach((item, index) => {
     const x = padding.left + index * 110;
-    ctx.fillStyle = item.color; ctx.fillRect(x, 8, 14, 14);
+    const legendGradient = ctx.createLinearGradient(x, 8, x + 14, 22);
+    legendGradient.addColorStop(0, item.color); legendGradient.addColorStop(1, item.gradientTo);
+    ctx.fillStyle = legendGradient; ctx.fillRect(x, 8, 14, 14);
     ctx.fillStyle = '#101827'; ctx.textAlign = 'left'; ctx.fillText(item.name, x + 20, 20);
   });
 }
